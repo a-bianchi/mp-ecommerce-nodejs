@@ -23,14 +23,16 @@
 //?source_news=webhooks
 
 const setPreference = ({ title, price, unit, img }) => {
-  console.log(img);
+  const img_url = img.replace(
+    "./",
+    "https://a-bianchi-mp-commerce-nodejs.herokuapp.com/"
+  );
   return {
     items: [
       {
         id: "1234",
         description: "​Dispositivo móvil de Tienda e-commerce​",
-        picture_url:
-          "https://a-bianchi-mp-commerce-nodejs.herokuapp.com/assets/003.jpg",
+        picture_url: img_url,
         title: title,
         category_id: "electronics",
         currency_id: "ARG",
