@@ -58,7 +58,7 @@ app.post("/checkout", function (req, res) {
     });
 });
 
-app.post("/notification", function (req, res) {
+app.post("/notifications", function (req, res) {
   console.log("===Webhook===");
   console.log(req.body);
   res.status(200).send("OK");

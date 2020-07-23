@@ -24,11 +24,13 @@ const setPreference = ({ title, price, unit, img }) => {
       },
     ],
     back_urls: {
-      success: "localhost:3000/success",
-      failure: "localhost:3000/failure",
-      pending: "localhost:3000/pending",
+      success: `https://a-bianchi-mp-commerce-nodejs.herokuapp.com/success`,
+      failure: "https://a-bianchi-mp-commerce-nodejs.herokuapp.com/failure",
+      pending: "https://a-bianchi-mp-commerce-nodejs.herokuapp.com/pending",
     },
     auto_return: "approved",
+    notification_url:
+      "https://a-bianchi-mp-commerce-nodejs.herokuapp.com/notifications?source_news=webhooks",
     payment_methods: {
       excluded_payment_methods: [
         {
@@ -43,7 +45,6 @@ const setPreference = ({ title, price, unit, img }) => {
       installments: 6,
     },
     external_reference: "alejobianchi@gmail.com",
-    notification_url: "localhost:3000/notification?source_news=webhooks",
   };
 };
 
