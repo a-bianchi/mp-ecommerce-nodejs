@@ -45,6 +45,7 @@ app.get("/pending", function (req, res) {
 
 app.post("/checkout", function (req, res) {
   const preference = setPreference(req.body);
+  console.log(preference);
   mercadopago.preferences
     .create(preference)
     .then(function (response) {
